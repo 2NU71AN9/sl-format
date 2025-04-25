@@ -1,0 +1,64 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# 表示这是最顶层的 EditorConfig 配置文件
+root = true
+
+# 匹配全部文件
+[*]
+# 设置字符集
+charset = utf-8
+# 缩进风格使用空格
+indent_style = space
+# 缩进大小为 2
+indent_size = 4
+# 换行符使用 lf
+end_of_line = lf
+# 文件末尾插入一个空行
+insert_final_newline = true
+# 去除行尾空格
+trim_trailing_whitespace = true
+
+# 匹配 markdown 文件
+[*.md]
+# markdown 文件中的行尾空格是有意义的，不去除
+trim_trailing_whitespace = false
+# 最大行长度为 100
+max_line_length = 100
+
+# 匹配 JavaScript 和 TypeScript 文件
+[*.{js,jsx,ts,tsx,vue}]
+# 强制要求分号结尾
+quote_type = single
+max_line_length = 100
+
+# 匹配 JSON 文件
+[*.{json,json5,webmanifest}]
+indent_size = 2
+
+# 匹配 YAML 文件
+[*.{yml,yaml}]
+indent_size = 2
+
+# 匹配 HTML 文件
+[*.{htm,html}]
+indent_size = 2
+
+# 匹配 CSS/SCSS/LESS 文件
+[*.{css,scss,less}]
+indent_size = 4
+
+# 匹配配置文件
+[*.{config,conf}]
+indent_size = 2
+
+# 匹配 Docker 相关文件
+[{Dockerfile,docker-compose.yml}]
+indent_size = 2
+
+# 匹配包管理器配置文件
+[{package.json,package-lock.json,pnpm-lock.yaml,yarn.lock}]
+indent_size = 2
+
+# 匹配 Shell 脚本
+[*.sh]
+end_of_line = lf
